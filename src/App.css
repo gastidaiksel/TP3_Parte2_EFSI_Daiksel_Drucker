@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #cc00cc 0%, #ee1155 100%);
+  color: white;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  justify-content: space-between; /* Empuja las columnas a los extremos */
+  align-items: flex-start;
+  max-width: 1000px; /* Ancho total del contenido */
+  margin: 0 auto; /* Centra el contenedor en la pantalla */
+  padding: 20px;
+}
+
+.app-column {
+  width: 45%; /* Cada columna ocupa casi la mitad */
+}

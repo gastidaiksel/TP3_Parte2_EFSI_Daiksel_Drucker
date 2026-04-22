@@ -1,0 +1,70 @@
+/* formulario.css */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  display: block;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: white;
+  text-align: left; /* Alinea el texto a la izquierda */
+  font-size: 14px;
+}
+
+.u-full-width {
+  width: 100%;
+  display: block;
+  padding: 12px;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 3px; /* Bordes menos redondeados para que sea más cuadrado */
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: white !important; /* Fuerza el fondo blanco */
+  color: #333; /* Color de texto oscuro para que se lea */
+}
+
+/* Para que el placeholder no se vea gris oscuro */
+.u-full-width::placeholder {
+  color: #a9a9a9;
+}
+
+textarea.u-full-width {
+  height: 100px;
+  resize: none;
+}
+
+.button-primary {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  padding: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+  letter-spacing: 1px;
+}
+
+.button-primary:hover {
+  background-color: #00acc1;
+}
+
+/* Agregá o editá esto en formulario.css */
+.button-primary {
+  width: 100%;
+  padding: 12px;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
