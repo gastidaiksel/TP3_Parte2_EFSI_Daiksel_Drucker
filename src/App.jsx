@@ -1,13 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 import Formulario from './components/Formulario/Index.jsx'
 import Subtitulo from './components/Subtitulo/Index.jsx'
 import Listado from './components/Listado/Index.jsx'
 
-const citas = [
+const citasIniciales = [
   {
     Mascota: "Nina",
     Dueño: "Martin",
@@ -32,17 +29,28 @@ const citas = [
 ]
 
 function App() {
+  const [citas, setCitas] = useState(citasIniciales)
+
+  const crearCita = (cita) => {
+    setCitas([...citas, cita])
+  }
+  
+  const eliminarCita = (index) => {
+    const nuevasCitas = citas.filter((_, i) => i !== index)
+    setCitas(nuevasCitas)
+  }
+
   return (
     <>
       <h1>ADMINISTRADOR DE PACIENTES</h1>
       <div className="app-container">
         <div className="app-column app-column--left">
           <Subtitulo subtitulo="Crear mi cita" />
-          <Formulario />
+          <Formulario crearCita={crearCita} />
         </div>
         <div className="app-column app-column--right">
           <Subtitulo subtitulo="Administra tus citas" />
-          <Listado citas={citas} />
+          <Listado citas={citas} eliminarCita={eliminarCita} />
         </div>
       </div>
     </>
